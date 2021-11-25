@@ -11,6 +11,7 @@ app.set('port', process.env.PORT); //Setear puerto, ej: localhost:4000
 
 
 // middlewares
+app.use(cors());
 app.use(morgan('dev')); //Ver request en consola 
 app.use(express.urlencoded({extended: false})); //body post form HTML 
 app.use(express.json()); //JSON documents
