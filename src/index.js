@@ -1,12 +1,14 @@
 require('dotenv').config() // .env
 const express = require('express'), 
     morgan = require('morgan'), //Ver request en consola 
-     app = express();
+    app = express(),
+    cors = require('cors');
 
 // settings
 app.set('port', process.env.PORT); //Setear puerto, ej: localhost:4000
 
 // middlewares
+app.use(cors());
 app.use(morgan('dev')); //Ver request en consola 
 app.use(express.urlencoded({extended: false})); //body post form HTML 
 app.use(express.json()); //JSON documents
