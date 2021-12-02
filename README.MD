@@ -51,6 +51,16 @@ La grabacion de dicha capacitacion puede ser encontrada en la seccion de Bienest
         - package-lock.json (Archivo)
         - package.json      (Archivo)
 
+7. Heroku:
+```
+heroku create
+```
+```
+heroku git:remote -a NAME_PROJECT
+```
+```
+git push heroku main
+```
 
 ## Utils:
 
