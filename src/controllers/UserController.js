@@ -6,14 +6,14 @@ var user = require('../models/User.js');
 exports.login = function (req, res) {
     var username = req.body.username;
     var password = req.body.password;
-
+    //SELECT * FROM users WHERE username = $1", [username] --> []
     user.find({username: username},function(err, userRes) {
         if(!err) {
             if(userRes.length < 1){
                 res.json({user:{}, proceso: false, err: "Usuario inexistente."});
             }else{
                 if(userRes[0].password === password){
-                    res.json({user: userRes[0], proceso: true});
+                    res.json({user: userRes[0], proceso: true}); //Loggeo
                 }else{
                     res.json({user:{}, proceso: false, err: "Contraseña Erronea."});
                 }
