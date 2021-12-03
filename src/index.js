@@ -2,7 +2,8 @@ require('dotenv').config() // .env
 const   express = require('express'), 
         morgan = require('morgan'), //Ver request en consola 
         app = express(),
-        cors = require('cors');
+        cors = require('cors'),
+        path = require('path');
 
 // settings
 app.set('port', process.env.PORT); //Setear puerto, ej: localhost:4000
