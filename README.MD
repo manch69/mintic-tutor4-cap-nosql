@@ -266,4 +266,3 @@ exports.update = function (req, res) {
 };
 ```
 
-Este es un cambio de prueba para ser pasado como Pull Request, y aprobarlo.
